@@ -1,6 +1,6 @@
 {
-  "name": "js-marker-clusterer",
-  "version": "1.0.0",
+  "name": "js-2mundos-marker-clusterer",
+  "version": "1.0.0-2m",
   "description": "The library creates and manages per-zoom-level clusters for large amounts of markers. Google API v3.",
   "main": "src/markerclusterer.js",
   "directories": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/googlemaps/js-marker-clusterer.git"
+    "url": "git+https://github.com/tpeixoto/js-2mundos-marker-clusterer.git"
   },
   "keywords": [
     "google",

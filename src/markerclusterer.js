@@ -164,16 +164,23 @@ function MarkerClusterer(map, opt_markers, opt_options) {
 
   // Add the map event listeners
   var that = this;
+  var hasChangedZoom = false;
+
   google.maps.event.addListener(this.map_, 'zoom_changed', function() {
     var zoom = that.map_.getZoom();
 
     if (that.prevZoom_ != zoom) {
       that.prevZoom_ = zoom;
-      that.resetViewport();
+      that.hasChangedZoom = true;
     }
   });
 
   google.maps.event.addListener(this.map_, 'idle', function() {
+    if (that.hasChangedZoom) {
+      that.hasChangedZoom = false;
+      that.resetViewport();
+    }
+
     that.redraw();
   });
 
